@@ -3,7 +3,8 @@
 
 def run_guessing_game
   num = rand(6) + 1
-  guess = gets
+  guess = gets.chomp
+  guess = guess.to_int
   if guess == num
     puts "You guessed the correct number!"
   elsif guess == "exit"
